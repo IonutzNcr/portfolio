@@ -3,16 +3,18 @@ import { useUrlHook } from "../hooks/useUrlHook";
 
 export const Navbar = () => {
   const page = useUrlHook();
+
   const close = () => {
     const modal = document.querySelector(".modal") as HTMLElement;
     modal.classList.add("off");
+    document.querySelector("main")?.classList.remove("none");
   };
 
 
 
   const open = () => {
     const modal = document.querySelector(".modal") as HTMLElement;
-
+    document.querySelector("main")?.classList.add("none");
     modal.classList.remove("off");
   };
 

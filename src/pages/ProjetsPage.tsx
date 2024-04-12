@@ -9,8 +9,6 @@ export const ProjetsPage = () => {
   const btn1Ref = useRef<HTMLAnchorElement>(null); //site
   const btn2Ref = useRef<HTMLAnchorElement>(null); //code
 
-  
-
   const changeProjet = (
     e: MouseEvent<HTMLButtonElement | HTMLDivElement>
   ): void => {
@@ -21,6 +19,12 @@ export const ProjetsPage = () => {
     lastActive.classList.remove("active_projet");
     e.currentTarget.classList.add("active_projet");
     setPrj(data as unknown as number);
+    document.querySelectorAll(".hidden_description").forEach(element=>{
+        element.classList.remove("animation_cordeon")
+    })
+    document.querySelectorAll(".arrow").forEach((element)=>{
+        element.classList.remove("arrow_up")
+    })
   };
 
   const hover = (e: MouseEvent<HTMLDivElement>) => {
@@ -39,6 +43,12 @@ export const ProjetsPage = () => {
       ) as HTMLDivElement;
       support.classList.add("hidden");
     }
+  };
+
+  const activeArcodeon = (e: MouseEvent) => {
+    console.log("c pour debug", e.currentTarget.nextElementSibling);
+    e.currentTarget.nextElementSibling?.classList.toggle("animation_cordeon");
+    e.currentTarget.classList.toggle("arrow_up");
   };
 
   return (
@@ -112,21 +122,65 @@ export const ProjetsPage = () => {
                 </thead>
                 <tbody>
                   {projets[prj].functionality.map((item, index) => {
-                    if(index % 2 === 0){
-                        return (
-                            <tr key = {index}>
-                              <td>{item}</td>
-                            </tr>
-                          );
-                    } else { 
-                        return (
-                            <tr key = {index} className="active-row">
-                              <td>{item}</td>
-                            </tr>
-                          );
-                    }
-                  })} 
+                    if (index % 2 === 0) {
+                      return (
+                        <tr key={index}>
+                          <td>
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexWrap: "wrap",
+                              }}
+                            >
+                              <p>{item[0]}</p>
+                              <svg
+                                onClick={activeArcodeon}
+                                className="arrow"
+                                style={{ marginLeft: "auto", width: "20px" }}
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                              </svg>
 
+                              <p className = "hidden_description"  >
+                                {item[1]}
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    } else {
+                      return (
+                        <tr key={index} className="active-row">
+                          <td>
+                            <div
+                              style={{
+                                width: "100%",
+                                display: "flex",
+                                flexWrap: "wrap",
+                              }}
+                            >
+                              <p>{item[0]}</p>
+                              <svg
+                                onClick={activeArcodeon}
+                                className="arrow"
+                                style={{ marginLeft: "auto", width: "20px" }}
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" />
+                              </svg>
+                              <p className = "hidden_description"  >
+                                {item[1]}
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    }
+                  })}
                 </tbody>
               </table>
             </div>
