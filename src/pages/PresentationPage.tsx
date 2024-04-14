@@ -1,8 +1,9 @@
 import "../styles/presentation.css";
 import "../styles/animation.css";
 import "../styles/general/navbar.css";
-import src from "../assets/bp1.png";
-import src2 from "../assets/bp2.png";
+import "../styles/general/footer.css";
+import src from "../assets/bin.svg";
+// import src2 from "../assets/bp2.png";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
 
@@ -20,7 +21,7 @@ export const PresentationPage = () => {
       <main>
         <div className="cover-page_presentation">
           <img className="img_p1" src={src} />
-          <img className="img_p2" src={src2} />
+          <img className="img_p2" src={src} />
           <div className="div_img_avatar">
             {/* <img className="img_avatar" src={src3} /> */}
           </div>

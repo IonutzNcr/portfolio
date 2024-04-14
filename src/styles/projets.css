@@ -15,9 +15,6 @@
 
 .page {
     width: 100vw;
-    /* height: 100vh; */
-    /* background-color: #2D3334; */
-    
 }
 
 
@@ -27,7 +24,7 @@
 /* modifier les row de la grid pour une meilleure representation spatiale */
 .main_box {
     margin-top:35px;
-    grid-column: 2/9;
+    grid-column: 2/10;
     align-self: center;
     justify-content: space-between; 
     /* height: 80%; */
@@ -82,19 +79,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  
-   
-   
 }
 
 .skills_container>div {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2D3334;
+    background-color: #445D48;
     padding: 4px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color:white;
+    box-shadow: #2D3334 1px 1px 5px 1px ;
 }
 
 .details {
@@ -104,8 +99,6 @@
     flex-direction: column;
     justify-content: start;
     gap: 20px;
-    
-    
     color: #2D3334;
     font-size: 1.2rem;
     flex-basis: 100;
@@ -151,9 +144,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
-/* .image>img:hover{
-    filter: blur(2px);
-} */
+
 
 .blur{
     filter: blur(2px);
@@ -183,9 +174,9 @@
     height: 30px;
     font-family: 'Yantramanav', sans-serif;
     font-size: 1.3rem;
-    background-color: #2D3334;
-    border: solid 2px #ECFF11;
-    color: #ECFF11;
+    background-color: #445D48;
+    border: solid 2px #D6CC99;
+    color: #D6CC99;
     transition: all;
     transition-duration: 0.5s;
     padding: 10px;
@@ -213,25 +204,20 @@
     display:flex;
     flex-direction: row;
     justify-content: center;
-    
     cursor: default;
-    background-color: #ECFF11;
-
-    border-bottom: #ECFF11 2px solid;
+    background-color: #D6CC99;
+    /* border-bottom: #ECFF11 2px solid; */
     gap: 30px;
     color:black;
 }
 
 .side-project>div {
-   
     padding:10px;
 }
 
 div.active_projet {
-    
     box-shadow: 2px 1px 1px 1px rgba(22, 21, 28, 0.75);
     font-family: 'Aldrich', sans-serif;
-    
 }
 
 /* animation coordeon  */
@@ -262,6 +248,7 @@ div.active_projet {
 .arrow{
     transform: rotate(90deg);
     transition: all 350ms ease-in-out;
+    color:#445D48;
 }
 
 .arrow_up{
@@ -280,15 +267,6 @@ div.active_projet {
     }
 }
 
-footer {
-    font-family: 'Inknut Antiqua', serif;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2D3334;
-    height: 75px;
-}
 
 @media screen and (max-width:1600px){
     .main_box{
@@ -438,6 +416,16 @@ footer {
         align-items: start;
         justify-content: center;
     }
+     .side-project{
+        margin:0;
+     }
+    .content-table{
+        min-width: 230px !important;
+    }
+
+    .side-project {
+        padding:0;
+    }
 
     .side-project>div{
         font-size: 0.8rem;
@@ -497,7 +485,7 @@ footer {
     /* background: orange; */
     /* opacity: 0.4; */
     border-bottom: #2D3334 1px solid;
-    color: orange;
+    color: #445D48;
     text-align: left;
     font-weight: bold;
   }

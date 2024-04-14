@@ -61,13 +61,14 @@ h4 {
     position: relative;
     cursor: pointer;
     padding: 10px;
+    color:white;
     /* width: 60%; */
     /* border: 2px solid #ECFF11; */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     background: linear-gradient(254deg,
             #2D3334 0%,
-            #2b2f30 50%,
-            #c0d6d6 100%);
+            #D6CC99 50%,    
+            #D6CC99 100%);
     background-size: 300% 300%;
     animation-name: gradient-animation;
     
@@ -122,12 +123,10 @@ h4 {
 .envoyer_btn {
     margin-top: 20px;
     width: fit-content;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  
     font-family: 'Share Tech', sans-serif;
     /* font-family: 'Yantramanav', sans-serif; */
 
-    background-color: #ECFF11;
+    background-color: #D6CC99;
     border: none;
     padding: 10px 20px;
     
@@ -155,22 +154,24 @@ h4 {
     bottom: calc((-10px - 1.3rem)/2);
     right: -1px;
     width: fit-content;
-    font-family: 'Yantramanav', sans-serif;
-    font-size: 1.3rem;
-    color: orange;
+    font-family: 'Share Tech', sans-serif;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+    color: #2D3334;
     /* background-color: #2D3334;
     border: #ECFF11 2px solid; */
     padding: 5px 10px;
     cursor: pointer;
-    background: #2D3334;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-   font-family: 'Aldrich', sans-serif;
+    background: #D6CC99;
+   /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.25); */
+   box-shadow: 2px 1px 1px 0px rgba(22, 21, 28, 0.75);
+  
    transition: all 0.5s ease-out;
 }
 
 .cv_envoyer:hover {
-    background-color: #ECFF11;
-    color: #2D3334;
+    background-color: #010101;
+    color: orange;
 }
 
 .waiting{
@@ -189,64 +190,6 @@ h4 {
 
 }
 
-
-
-footer {
-    font-family: 'Inknut Antiqua', serif;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2D3334;
-    height: 75px;
-}
-
-
-
-.modal {
-    font-family: 'Yantramanav', sans-serif;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: yellow;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    font-size: 1.5rem;
-}
-
-.off {
-    display: none;
-}
-
-.modal a {
-    all: unset;
-}
-
-.modal a:hover {
-    cursor: pointer;
-    text-decoration: line-through;
-    color: #2D3334;
-}
-
-.act {
-    text-decoration: line-through;
-}
-
-.close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 2rem;
-    color: black;
-}
 
 @media screen and (max-width:1000px) {
     main {
@@ -285,7 +228,11 @@ footer {
     }
 
     .contact_container{
-        
+        grid-column: 2/10;
+        margin-top:35px;
+        margin-bottom: 35px;
+        margin-left:0;
+        margin-right: 0;
     }
 
 }
@@ -323,7 +270,7 @@ footer {
     }
 
     .contact_container {
-        grid-column: 1/6;
+        grid-column: 1/12;
         grid-row: 2/3;
         min-width: 0px;
         /* big shout to copilot who find this strange fix to horizontal scroll */
@@ -332,7 +279,7 @@ footer {
     }
 
     .reseaux_container {
-        grid-column: 1/5;
+        grid-column: 1/12;
         flex-direction: row;
         justify-content: center;
     }

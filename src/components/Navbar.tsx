@@ -46,14 +46,14 @@ export const Navbar = () => {
         <p onClick={close} className="close">
           X
         </p>
-        <p className="act">
-          <Link to="/">PRESENTATION</Link>
+        <p className={page === "presentation"? "act" : ""}>
+          <Link to="/" onClick={()=>close()} >PRESENTATION</Link>
         </p>
-        <p>
-          <Link to="/projets">PROJETS</Link>
+        <p className={page === "projets"? "act" : ""}>
+          <Link to="/projets" onClick={()=>close()}>PROJETS</Link>
         </p>
-        <p>
-          <Link to="/contact">CONTACT</Link>
+        <p className={page === "contact"? "act" : ""}>
+          <Link to="/contact" onClick={()=>close()}>CONTACT</Link>
         </p>
       </div>
     </>

@@ -1,0 +1,10 @@
+
+footer{
+    font-family: 'Inknut Antiqua', serif;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+    height:75px;    
+}
