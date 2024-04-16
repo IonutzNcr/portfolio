@@ -5,7 +5,7 @@ import "../styles/general/navbar.css";
 import src from "../assets/github-mark.svg";
 import src2 from "../assets/linkedin_y.svg";
 import cvPath from "../assets/cv-compressé.pdf";
-import { FormEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -23,22 +23,24 @@ export const ContactPage = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, touchedFields, dirtyFields },
+    reset,
+    formState: { errors, dirtyFields },
   } = useForm<Inputs>({
     mode: "onChange",
   });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
-    console.log("Errors:", errors);
+  const onSubmit: SubmitHandler<Inputs> = () => {
+     sendEmail();
+
   };
 
-  const onErrors = (errors) => console.error(errors);
+
 
   emailjs.init("_I4OpWfnzzlvT4kVc");
 
-  const sendEmail = (e: FormEvent) => {
-    e.preventDefault();
+  const sendEmail = () => {
+    
+    
 
     if (form.current) {
       setModal("waiting");
@@ -50,13 +52,8 @@ export const ContactPage = () => {
           "_I4OpWfnzzlvT4kVc"
         )
         .then(
-          (result) => {
-            console.log(result.text);
-            for (let i = 0; i < 4; i++) {
-              (
-                form.current?.children[i].children[1] as HTMLInputElement
-              ).value = "";
-            }
+          () => {
+            reset();
             setModal("Done");
             setTimeout(() => {
               setModal(false);
@@ -67,8 +64,7 @@ export const ContactPage = () => {
           }
         );
     }
-    // form.current.children[0].value = ""
-    // console.log(form.current.children[0].value)
+   
   };
 
   return (
@@ -76,7 +72,7 @@ export const ContactPage = () => {
       <Navbar />
       <main>
         <div className="contact_container">
-          <form ref={form} onSubmit={handleSubmit(onSubmit, onErrors)}>
+          <form ref={form} onSubmit={handleSubmit(onSubmit)}>
             <p className="champs_obligatoires">* champs obligatoires</p>
             <div className="groupe_li">
               <label htmlFor="nom">Nom / Prénom</label>
