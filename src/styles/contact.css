@@ -303,3 +303,32 @@ h4 {
         background-position: 0% 50%;
     }
 }
+
+
+/* validation & invalidation style */
+
+.incorrect{
+    border: 2px solid rgb(219, 72, 72) !important ;
+}
+
+
+
+.incorrect:focus{
+    border: 2px solid rgb(219, 72, 72) !important ;
+    outline: none;
+}
+
+
+
+.correct, .correct:focus{
+    outline: none;
+    border: 2px solid #445D48 !important ;
+}
+
+.champs_obligatoires{
+    color: rgb(219, 72, 72) !important ;
+    opacity: 1 !important;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 1.0rem;
+    
+}

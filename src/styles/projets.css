@@ -352,7 +352,7 @@ div.active_projet {
     }
 
     .side-project{
-        margin-top:20px;
+        /* margin-top:20px; */
         margin-bottom: 20px;
         grid-row: 1/2;
     }
@@ -536,4 +536,8 @@ div.active_projet {
     flex-basis: 100%;
     display: none;
     margin:10px;
+  }
+
+  .btn_disabled{
+    cursor:not-allowed !important;
   }

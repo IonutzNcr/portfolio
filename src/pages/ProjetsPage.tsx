@@ -81,8 +81,9 @@ export const ProjetsPage = () => {
               ) : (
                 <a
                   ref={btn1Ref}
-                  className="voir_btn btn1 disabled"
-                  href={projets[prj].site}
+                  className="voir_btn btn1 btn_disabled"
+                     
+                  
                 >
                   Voir le site
                 </a>
