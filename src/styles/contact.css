@@ -130,7 +130,8 @@ h4 {
   cursor: pointer;
   box-shadow: 2px 1px 1px 0px rgba(22, 21, 28, 0.75);
   margin-bottom: 30px;
-
+  display:flex;
+  align-items: center;
   transition: all 0.5s ease-out;
 }
 

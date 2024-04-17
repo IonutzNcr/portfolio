@@ -2,6 +2,7 @@ import "../styles/presentation.css";
 import "../styles/animation.css";
 import "../styles/general/navbar.css";
 import "../styles/general/footer.css";
+import  src_svg from "../assets/fleche_cst.svg";
 import src from "../assets/bin.svg";
 // import src2 from "../assets/bp2.png";
 import { useNavigate } from "react-router-dom";
@@ -52,7 +53,7 @@ export const PresentationPage = () => {
             </p>
           </div>
           <div>
-            <button className="button_contact" onClick={contact}>&#x21AA; Contactez-moi</button>
+            <button className="button_contact" onClick={contact}>  <img className="svg_fleche" src={src_svg} /> Contactez-moi</button>
           </div>
         </div>
       </main>

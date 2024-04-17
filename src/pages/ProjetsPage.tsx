@@ -95,7 +95,7 @@ export const ProjetsPage = () => {
                 href={projets[prj].code}
                 target="_blank"
               >
-                Voir le code
+                Voir le code source
               </a>
             </div>
             <img

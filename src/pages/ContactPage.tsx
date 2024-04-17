@@ -4,7 +4,9 @@ import "../styles/contact.css";
 import "../styles/general/navbar.css";
 import src from "../assets/github-mark.svg";
 import src2 from "../assets/linkedin_y.svg";
+import src_svg from "../assets/fleche_cst.svg"
 import cvPath from "../assets/cv_Ionut.pdf";
+
 import { useEffect, useRef, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -119,7 +121,7 @@ export const ContactPage = () => {
                 placeholder="Mon message ..."
               ></textarea>
             </div>
-            <button className="envoyer_btn">&#x21AA; Envoyer</button>
+            <button className="envoyer_btn"> <img className="svg_fleche" src={src_svg} /> Envoyer</button>
 
             <a
               href={cvPath}

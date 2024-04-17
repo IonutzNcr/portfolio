@@ -167,7 +167,7 @@
 
 .voir_btn {
     all:unset;
-    width: 30%;
+    width: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -553,4 +553,7 @@ div.active_projet {
 
   .btn_disabled{
     cursor:not-allowed !important;
+    display:none;
   }
+
+  
