@@ -53,10 +53,10 @@ export const Navbar = () => {
           <Link to="/" onClick={()=>close()} >PRESENTATION</Link>
         </p>
         <p className={page === "#projets"? "act" : ""}>
-          <Link to="/projets" onClick={()=>close()}>PROJETS</Link>
+          <Link to="/#projets" onClick={()=>close()}>PROJETS</Link>
         </p>
         <p className={page === "#contact"? "act" : ""}>
-          <Link to="/contact" onClick={()=>close()}>CONTACT</Link>
+          <Link to="/#contact" onClick={()=>close()}>CONTACT</Link>
         </p>
       </div>
     </>
