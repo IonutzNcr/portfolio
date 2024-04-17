@@ -32,10 +32,10 @@ export const Navbar = () => {
           <li className={page === "presentation" ? "active": ""}>
             <Link to="/">PRESENTATION</Link>
           </li>
-          <li className={page === "#projets" ? "active" : ""}>
+          <li className={page === "projets" ? "active" : ""}>
             <Link to="/projets">PROJETS</Link>
           </li>
-          <li className={page === "#contact" ? "active": ""}>
+          <li className={page === "contact" ? "active": ""}>
             <Link to="/contact">CONTACT</Link>
           </li>
         </ul>
@@ -52,11 +52,11 @@ export const Navbar = () => {
         <p className={page === "presentation"? "act" : ""}>
           <Link to="/" onClick={()=>close()} >PRESENTATION</Link>
         </p>
-        <p className={page === "#projets"? "act" : ""}>
-          <Link to="/#projets" onClick={()=>close()}>PROJETS</Link>
+        <p className={page === "projets"? "act" : ""}>
+          <Link to="/projets" onClick={()=>close()}>PROJETS</Link>
         </p>
-        <p className={page === "#contact"? "act" : ""}>
-          <Link to="/#contact" onClick={()=>close()}>CONTACT</Link>
+        <p className={page === "contact"? "act" : ""}>
+          <Link to="/contact" onClick={()=>close()}>CONTACT</Link>
         </p>
       </div>
     </>
