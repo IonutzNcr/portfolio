@@ -76,6 +76,7 @@
 
 .skills_container {
     font-family: 'Yantramanav', sans-serif;
+    
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -200,6 +201,7 @@
 }
 
 .side-project {
+    font-family: 'Aldrich', sans-serif;
     padding: 0 200px;
     display:flex;
     flex-direction: row;
@@ -218,6 +220,8 @@
 div.active_projet {
     box-shadow: 2px 1px 1px 1px rgba(22, 21, 28, 0.75);
     font-family: 'Aldrich', sans-serif;
+    color:#445D48;
+    font-weight: 500;
 }
 
 /* animation coordeon  */
