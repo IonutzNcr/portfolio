@@ -4,7 +4,7 @@ import "../styles/contact.css";
 import "../styles/general/navbar.css";
 import src from "../assets/github-mark.svg";
 import src2 from "../assets/linkedin_y.svg";
-import cvPath from "../assets/cv-compressé.pdf";
+import cvPath from "../assets/cv_Ionut.pdf";
 import { useEffect, useRef, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { useForm, SubmitHandler } from "react-hook-form";

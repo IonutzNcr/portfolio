@@ -289,3 +289,19 @@ span{
 }
 
 
+@media screen and (max-width:424px){
+
+    .description_pr{
+        grid-column: 2/10;
+    }
+
+    .core_pr{
+        font-size: 17px;
+        line-height: 1.4rem;
+      
+    }
+
+    .div_core_pr{
+        width: 100%;
+    }
+}
