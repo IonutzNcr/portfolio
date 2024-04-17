@@ -33,10 +33,10 @@ export const Navbar = () => {
             <Link to="/">PRESENTATION</Link>
           </li>
           <li className={page === "projets" ? "active" : ""}>
-            <Link to="/projets">PROJETS</Link>
+            <Link to="/#projets">PROJETS</Link>
           </li>
           <li className={page === "contact" ? "active": ""}>
-            <Link to="/contact">CONTACT</Link>
+            <Link to="/#contact">CONTACT</Link>
           </li>
         </ul>
         <div onClick={open} className="burger">

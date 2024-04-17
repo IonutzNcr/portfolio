@@ -12,7 +12,7 @@ export const PresentationPage = () => {
   const navigate = useNavigate();
 
   const contact = () => {
-    navigate("/contact");
+    navigate("/#contact");
   };
 
 
