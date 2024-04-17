@@ -345,7 +345,7 @@ div.active_projet {
     .details{
        padding-left: 0px;
        padding-bottom: 75px;
-        width: 80%;
+        width: 100%;
     }
 
 
@@ -395,6 +395,12 @@ div.active_projet {
     .details>ul{
         display:flex;
     }
+
+    .details{
+        width: 100%;
+    }
+
+    
 }
 
 
@@ -411,6 +417,10 @@ div.active_projet {
     .skills_container>div{
         font-size: 1rem;
     }
+
+    .details{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:424px){
@@ -426,9 +436,6 @@ div.active_projet {
      .side-project{
         margin:0;
      }
-    .content-table{
-        min-width: 230px !important;
-    }
 
     .side-project {
         padding:0;
@@ -492,7 +499,7 @@ div.active_projet {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 1rem;
-    min-width: 400px;
+    /* min-width: 400px; */
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
