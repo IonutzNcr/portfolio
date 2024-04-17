@@ -2,7 +2,7 @@ import "../styles/presentation.css";
 import "../styles/animation.css";
 import "../styles/general/navbar.css";
 import "../styles/general/footer.css";
-import  src_svg from "../assets/fleche_cst.svg";
+import src_svg from "../assets/fleche_cst.svg";
 import src from "../assets/bin.svg";
 // import src2 from "../assets/bp2.png";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +14,6 @@ export const PresentationPage = () => {
   const contact = () => {
     navigate("/#contact");
   };
-
 
   return (
     <div className="page_presentation">
@@ -38,6 +37,11 @@ export const PresentationPage = () => {
             </p>
           </div>
           <div className="div_core_pr">
+            <p className="recherche_pr">
+              Cherche alternance de 6 mois{" "}
+              <span className="span_asap"> asap </span> avec un rythme de 3
+              semaines en entreprise / 1 semaine en formation.{" "}
+            </p>
             <p className="core_pr">
               Apprenti développeur Full Stack en pleine évolution, passionné par
               la création d'applications web de bout en bout. Acquiert des
@@ -47,17 +51,16 @@ export const PresentationPage = () => {
               et toujours prêt à relever de nouveaux défis pour perfectionner
               ses compétences.
             </p>
-            <p className="recherche_pr">
-              Cherche alternance de 6 mois <span className="span_asap"> asap </span> avec un rythme de 3 semaines en
-              entreprise / 1 semaine en formation.{" "}
-            </p>
           </div>
           <div>
-            <button className="button_contact" onClick={contact}>  <img className="svg_fleche" src={src_svg} /> Contactez-moi</button>
+            <button className="button_contact" onClick={contact}>
+              {" "}
+              <img className="svg_fleche" src={src_svg} /> Contactez-moi
+            </button>
           </div>
         </div>
       </main>
-      
+
       <footer>Ionut Nicoara</footer>
     </div>
   );
