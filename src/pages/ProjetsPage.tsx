@@ -28,7 +28,7 @@ export const ProjetsPage = () => {
   };
 
   const hover = (e: MouseEvent<HTMLDivElement>) => {
-    console.log("hmmm3");
+    // console.log("hmmm3");
     const target = e.currentTarget as HTMLDivElement;
     target.classList.add("blur");
     const support = document.querySelector(".support_image") as HTMLDivElement;
@@ -46,7 +46,7 @@ export const ProjetsPage = () => {
   };
 
   const activeArcodeon = (e: MouseEvent) => {
-    console.log("c pour debug", e.currentTarget.nextElementSibling);
+    // console.log("c pour debug", e.currentTarget.nextElementSibling);
     e.currentTarget.children[2]?.classList.toggle("animation_cordeon");
     e.currentTarget.children[1]?.classList.toggle("arrow_up");
   };
