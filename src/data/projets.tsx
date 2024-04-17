@@ -21,7 +21,7 @@ export const projets: Projet[] = [
     image: src,
     functionality: [
       [
-        "Se connecter / Se déconnecter",
+        "Identification",
         "L'accès à l'application se fait à travers une simple connexion. L'utilisateur entre un pseudonyme qui est ensuite stocké sur le serveur. Un utilisateur ne peut pas se connecter avec le même pseudonyme s'il existe déjà. Une fois que l'utilisateur quitte l'application, son compte est automatiquement supprimé. Il existe deux façons de quitter l'application : soit en cliquant sur le bouton « Déconnecter », soit en fermant simplement l'application web.",
       ],
       [
@@ -40,7 +40,7 @@ export const projets: Projet[] = [
     skills: ["React", "Api", "Oauth2"],
     image: src3,
     functionality: [
-      ["Se connecter / Se déconnecter", "Cette fonction permet à l'utilisateur d'accéder à son compte personnel où il peut sauvegarder ses préférences et suivre ses séries favorites."],
+      ["Identification", "Cette fonction permet à l'utilisateur d'accéder à son compte personnel où il peut sauvegarder ses préférences et suivre ses séries favorites."],
       ["Explorer de nouvelles séries", "Cette fonctionnalité offre à l'utilisateur la possibilité de découvrir de nouvelles séries basées sur ses goûts et les tendances actuelles. L'application propose des recommandations personnalisées et permet la recherche de séries par genre, popularité ou recommandations critiques. C'est une excellente manière d'élargir ses horizons télévisuels et de trouver de nouveaux coups de cœur."],
       ["Suivre des Séries", "Avec cette fonctionnalité, l'utilisateur peut suivre les séries qu'il commence à regarder. Il peut ajouter des séries à sa liste personnelle et recevoir des notifications lorsque de nouveaux épisodes sont disponibles. Cela inclut des mises à jour sur les dates de sortie des épisodes et des alertes pour les épisodes manqués, assurant ainsi qu'il reste à jour avec ses séries préférées."],
     ],

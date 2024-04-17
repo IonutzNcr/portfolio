@@ -47,8 +47,8 @@ export const ProjetsPage = () => {
 
   const activeArcodeon = (e: MouseEvent) => {
     console.log("c pour debug", e.currentTarget.nextElementSibling);
-    e.currentTarget.nextElementSibling?.classList.toggle("animation_cordeon");
-    e.currentTarget.classList.toggle("arrow_up");
+    e.currentTarget.children[2]?.classList.toggle("animation_cordeon");
+    e.currentTarget.children[1]?.classList.toggle("arrow_up");
   };
 
   return (
@@ -128,6 +128,7 @@ export const ProjetsPage = () => {
                         <tr key={index}>
                           <td>
                             <div
+                             onClick={activeArcodeon}
                               style={{
                                 width: "100%",
                                 display: "flex",
@@ -136,7 +137,7 @@ export const ProjetsPage = () => {
                             >
                               <p>{item[0]}</p>
                               <svg
-                                onClick={activeArcodeon}
+                               
                                 className="arrow"
                                 style={{ marginLeft: "auto", width: "20px" }}
                                 xmlns="http://www.w3.org/2000/svg"
@@ -157,6 +158,7 @@ export const ProjetsPage = () => {
                         <tr key={index} className="active-row">
                           <td>
                             <div
+                             onClick={activeArcodeon}
                               style={{
                                 width: "100%",
                                 display: "flex",
@@ -165,7 +167,7 @@ export const ProjetsPage = () => {
                             >
                               <p>{item[0]}</p>
                               <svg
-                                onClick={activeArcodeon}
+                               
                                 className="arrow"
                                 style={{ marginLeft: "auto", width: "20px" }}
                                 xmlns="http://www.w3.org/2000/svg"
