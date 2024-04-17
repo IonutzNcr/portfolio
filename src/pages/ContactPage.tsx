@@ -5,7 +5,7 @@ import "../styles/general/navbar.css";
 import src from "../assets/github-mark.svg";
 import src2 from "../assets/linkedin_y.svg";
 import cvPath from "../assets/cv-compressé.pdf";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { useForm, SubmitHandler } from "react-hook-form";
 
@@ -19,6 +19,7 @@ type Inputs = {
 export const ContactPage = () => {
   const [modal, setModal] = useState<string | boolean>(false);
   const form = useRef<HTMLFormElement>(null);
+  const dialogRef = useRef<HTMLDialogElement>(null)
 
   const {
     register,
@@ -29,19 +30,24 @@ export const ContactPage = () => {
     mode: "onChange",
   });
 
+
+  useEffect(()=>{
+    if(modal === "waiting" ){
+      dialogRef.current?.showModal();
+    } else if (!modal){
+      dialogRef.current?.close();
+    }
+  },[modal])
+
   const onSubmit: SubmitHandler<Inputs> = () => {
      sendEmail();
 
   };
 
-
-
   emailjs.init("_I4OpWfnzzlvT4kVc");
 
   const sendEmail = () => {
     
-    
-
     if (form.current) {
       setModal("waiting");
       emailjs
@@ -68,7 +74,7 @@ export const ContactPage = () => {
   };
 
   return (
-    <div className="page">
+    <div className={modal=="waiting" || modal =="done" ? "no-event" : "page"} >
       <Navbar />
       <main>
         <div className="contact_container">
@@ -137,12 +143,12 @@ export const ContactPage = () => {
       </main>
 
       <footer>Ionut Nicoara</footer>
-      <div
+      <dialog ref={dialogRef} open
         className={modal === "waiting" || modal === "Done" ? "waiting" : "off"}
       >
         {" "}
-        {modal === "waiting" ? "Waiting..." : "Done"}{" "}
-      </div>
+        {modal === "waiting" ? "En attente..." : "Envoyé"}{" "}
+      </dialog>
     </div>
   );
 };

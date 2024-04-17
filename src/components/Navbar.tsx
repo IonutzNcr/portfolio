@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { useUrlHook } from "../hooks/useUrlHook";
+import { useNavigate } from "react-router-dom";
+
+
 
 export const Navbar = () => {
   const page = useUrlHook();
-
+  const navigate = useNavigate();
   const close = () => {
     const modal = document.querySelector(".modal") as HTMLElement;
     modal.classList.add("off");
@@ -21,7 +24,7 @@ export const Navbar = () => {
   return (
     <>
       <nav>
-        <div>
+        <div className="home_navigator" onClick = {()=>navigate("/")}>
           <p className="ionut">IONUT</p>
           <div className="navbar_bar"></div>
         </div>

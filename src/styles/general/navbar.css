@@ -233,3 +233,12 @@ a:hover{
 .none{
     display:none;
 }
+
+.home_navigator:hover{
+    transform: scale(1.2);
+    transition: all 300ms ease-in;
+}
+
+.home_navigator>p{
+    cursor:pointer;
+}
