@@ -1,6 +1,7 @@
 import src from "../assets/irc.png";
 import src2 from "../assets/event.png";
 import src3 from "../assets/prev.png";
+import src4 from "../assets/vict.jpg"
 
 interface Projet {
   name: string;
@@ -35,6 +36,32 @@ export const projets: Projet[] = [
     ],
     site: "",
     code: "https://github.com/IonutzNcr/my_irc/tree/main",
+  },
+  {
+    name: "Petites Victoires",
+    description:"Une petite application créée en 3 jours pour découvrir Python et Django. Cette application, au design simple, permet à l'utilisateur d'enregistrer ses victoires quotidiennes et de les partager. L'objectif de cette application est de créer un environnement positif pour aider ceux qui sont démotivés ou paresseux à s'activer et à accomplir des choses.",
+    skills:["Python", "Django","SQLite"],
+    image:src4,
+    functionality:[
+      [
+        "Identification",
+        "L'authentification se fait à travers un pseudonyme et un mot de passe. Elle se fait une fois puis l'utilisateur est sauvegarder dans une session "
+      ],
+      [
+        "Recherche",
+        "L'utilisateur peut rechercher par nom, ou par contenu."
+      ],
+      [
+        "CRUD Victoires",
+        "L'utilisateur peut créer, lire, éditer, supprimer ses victoires"
+      ],
+      [
+        "Page Profile",
+        "L'utilisateur peut mettre à jour ses informations à tout moment."
+      ]
+    ],
+    site:"",
+    code:"https://github.com/IonutzNcr/Learning-Django"
   },
   {
     name: "Previously on",
